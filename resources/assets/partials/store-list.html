@@ -1,0 +1,30 @@
+<style>
+    .angular-google-map-container { height: 400px; }
+</style>
+
+<h1>Stores</h1>
+
+<div class="row" >
+    <form>
+        <input type="text" name="location"/>
+        <input type="numer" name="radius"/>
+        <input type="submit">
+    </form>
+    <div>
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+            <ui-gmap-marker ng-repeat="store in stores" coords="store.coords" idkey="store.storeId">
+        </ui-gmap-google-map>
+    </div>
+    <div ng-repeat="store in stores">
+        <address>
+            <strong>{{store.longName}}</strong><br/>
+            {{store.address}}{{store.address2 ? ', ' : ''}}{{store.address2}}<br/>
+            {{store.city}}, {{store.region}} {{store.fullPostalCode}}<br/>
+            <abbr title="Phone">P:</abbr> {{store.phone}}
+        </address>
+        <p>
+            <strong>Distance:</strong> {{store.distance}} miles<br/>
+            <strong>Hours:</strong> {{store.hours}}<br/>
+        </p>
+    </div>
+</div>
