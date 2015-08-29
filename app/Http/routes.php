@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('start');
 });
 
 // Authentication routes...
@@ -23,3 +23,10 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 // Registration routes...
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+// Custom routes for resource controllers...
+
+// Resource routes...
+Route::resource('store', 'StoreController');
+Route::resource('product', 'ProductController');
+Route::resource('shopping-list', 'ShoppingListController');
