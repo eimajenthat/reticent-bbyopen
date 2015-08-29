@@ -30,3 +30,8 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::resource('store', 'StoreController');
 Route::resource('product', 'ProductController');
 Route::resource('shopping-list', 'ShoppingListController');
+
+
+// The internet says we need this because Blade's default tags conflict with Angular's
+Blade::setContentTags('<%', '%>'); // For variables and all things Blade.
+Blade::setEscapedContentTags('<%%', '%%>'); // For escaped data.
