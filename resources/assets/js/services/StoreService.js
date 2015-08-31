@@ -1,4 +1,4 @@
-angular.module('reticentDemoApp.services',['ngResource']).factory('Store', ['$resource', function($resource){
+angular.module('reticentDemoApp.services').factory('Store', ['$resource', function($resource){
     return $resource(
         '/store/:id',
         {Id: "@id"},

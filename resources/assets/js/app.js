@@ -5,7 +5,8 @@ var reticentDemoApp = angular.module('reticentDemoApp', [
     'reticentDemoApp.services'
 ]);
 angular.module('reticentDemoApp.controllers', []);
-angular.module('reticentDemoApp.services', []);
+angular.module('reticentDemoApp.services', ['ngResource']);
+reticentDemoApp.constant("Modernizr", Modernizr);
 
 reticentDemoApp.config(['$routeProvider',
     function($routeProvider) {
