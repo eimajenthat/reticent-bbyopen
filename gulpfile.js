@@ -25,6 +25,7 @@ elixir(function (mix) {
             'services/*.js'
         ])
         .copy('resources/assets/fonts', 'public/fonts')
+        .copy('resources/assets/fonts', 'public/build/fonts')
         .copy('resources/assets/partials', 'public/partials')
         .version([
             'css/all.css',

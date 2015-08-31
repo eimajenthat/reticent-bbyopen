@@ -1,6 +1,7 @@
 var reticentDemoApp = angular.module('reticentDemoApp', [
     'ngRoute',
     'uiGmapgoogle-maps',
+    'mgcrea.pullToRefresh',
     'reticentDemoApp.controllers',
     'reticentDemoApp.services'
 ]);
